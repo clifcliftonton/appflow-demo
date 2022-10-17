@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Preferences } from '@capacitor/preferences';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  private tenantId = "";
 
+  constructor() {
+    (async () => {
+      const { value } = await Preferences.get({ key: 'TENANT_ID' });
+      this.tenantId = value
+    })();
+  }
 }
