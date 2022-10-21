@@ -1,0 +1,14 @@
+vars:
+  BUNDLE_ID:
+  TENANT_ID:
+platforms:
+  android:
+    packageName: $BUNDLE_ID
+    gradle:
+      - file: app/build.gradle
+        target:
+          android:
+            defaultConfig:
+        insert: |
+          buildConfigField 'String', 'TENANT_ID', "\"$TENANT_ID\""
+
