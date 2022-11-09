@@ -1,0 +1,9 @@
+{
+    "apps":
+    [
+        {
+            "appId": "c6c70932",
+            "webBuildCommand": "ng build"
+        }
+    ]
+}
