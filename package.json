@@ -12,7 +12,7 @@
     "e2e": "ng e2e",
     "assets": "rm -rf assets && mkdir assets && cp configs/$TENANT_ID/icon.png assets && capacitor-assets generate",
     "configure": "trapeze run -y configs/$TENANT_ID/config.yaml",
-    "appflow:build": "npm run assets && npm run configure && npm run build"
+    "appflow:build": "./build.sh"
   },
   "private": true,
   "dependencies": {
