@@ -8,7 +8,13 @@ platforms:
       - file: app/build.gradle
         target:
           android:
-            defaultConfig:
+            buildTypes:
+              debug:
         insert: |
-          buildConfigField 'String', 'TENANT_ID', "\"$TENANT_ID\""
-
+          buildConfigField("String", "TENANT_ID", "\"$TENANT_ID\"")
+      - file: app/build.gradle
+        target:
+          android:
+            namespace:
+        replace: 
+          namespace: "\"$BUNDLE_ID\""
