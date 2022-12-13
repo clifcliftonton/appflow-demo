@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "assets": "rm -rf assets && mkdir assets && cp configs/$TENANT_ID/icon.png assets && capacitor-assets generate",
-    "configure": "trapeze run -y configs/$TENANT_ID/config.yaml",
+    "configure": "trapeze run -y configs/$TENANT_ID/config.yaml --verbose",
     "appflow:build": "./build.sh"
   },
   "private": true,
@@ -48,7 +48,7 @@
     "@angular/language-service": "^14.0.0",
     "@capacitor/cli": "4.3.0",
     "@ionic/angular-toolkit": "^6.0.0",
-    "@trapezedev/configure": "^5.0.7",
+    "@trapezedev/configure": "^6.0.9",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",

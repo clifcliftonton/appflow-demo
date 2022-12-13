@@ -4,6 +4,7 @@ vars:
 platforms:
   android:
     packageName: $BUNDLE_ID
+    appName: Envision
     gradle:
       - file: app/build.gradle
         target:
