@@ -1,0 +1,21 @@
+vars:
+  BUNDLE_ID:
+  TENANT_ID:
+platforms:
+  android:
+    packageName: $BUNDLE_ID
+    appName: Prospera
+    gradle:
+      - file: app/build.gradle
+        target:
+          android:
+            buildTypes:
+              debug:
+        insert: |
+          buildConfigField("String", "TENANT_ID", "\"$TENANT_ID\"")
+      - file: app/build.gradle
+        target:
+          android:
+            namespace:
+        replace: 
+          namespace: "\"$BUNDLE_ID\""
